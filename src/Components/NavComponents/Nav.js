@@ -6,7 +6,6 @@ const Nav = () => {
     return (
       <Router>
         <div className="nav">
-          <nav>
             <ul>
               <li>
                 <Link className="links" to="/">Home</Link>
@@ -15,8 +14,6 @@ const Nav = () => {
                 <Link className="links" to="/">About</Link>
               </li>
             </ul>
-          </nav>
-  
           {/* <Route path="/" exact component={Index} />
           <Route path="/about/" component={About} />
           <Route path="/users/" component={Users} /> */}

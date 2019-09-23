@@ -1,41 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { getNasaData } from "./Nasa-api.js";
-import axios from "axios";
 import Nav from "./Components/NavComponents/Nav.js";
 import Logo from "./Components/NavComponents/Logo.js";
 import AboutComponent from "./Components/AboutComponents/AboutComponent.js"
 import DateComponent from "./Components/DateComponents/DateComponent.js";
+import banner from "./Img/banner.jpg"
 
 
 function App() {
 
-  const [spaceImg, setSpaceImg] = useState()
+  const [spaceImg, setSpaceImg] = useState([]);
+  const [date, setDate] = useState(1)
 
   // useEffect(() => {
-  //   getNasaData(setSpaceImg)
-  // }, [])
+  //   getNasaData(date, setSpaceImg)
+  // }, [date])
 
 
   return (
     <div className="container">
       <div className="App">
         <div className="header">
-          <div>
             <Logo />
-          </div>
-          <div>
             <Nav />
-          </div>
+        </div>
+        <div className="banner-container">
+          <img className="banner" src={banner} alt="banner"/>
         </div>
         <div>
           <AboutComponent />
         </div>
         <div>
-          <DateComponent />
+          <DateComponent date={date} setDate={setDate}/>
         </div>
         <div className="img-container">
-          <img className="nasa-img" src={spaceImg} alt="nasa photo" />
+          {spaceImg.map((image, index) => {
+            return <img className="nasa-img" key={index } src={spaceImg} alt={`space image${index}`} />
+          })}
         </div>
       </div>
     </div>
