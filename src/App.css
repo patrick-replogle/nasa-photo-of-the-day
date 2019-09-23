@@ -197,10 +197,28 @@ html {
 
 .nav ul {
   display: flex;
-  flex-direction: flex-start;
+  flex-direction: flex-end;
   align-items: center;
+  width: 50%;
   justify-content: space-around;
-  
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.about h3{
+  margin: 10px 10px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.about p {
+  font-size: 1.8rem;
+  margin: 0 10px;
 }
 
 .links {

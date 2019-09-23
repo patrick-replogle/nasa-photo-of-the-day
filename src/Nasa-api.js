@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export function getNasaData(setter) {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-09-23')
         .then((response) => {
             //console.log(response);
             setter(response.data.hdurl)

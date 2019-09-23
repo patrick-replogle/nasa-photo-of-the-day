@@ -14,9 +14,6 @@ const Nav = () => {
               <li>
                 <Link className="links" to="/">About</Link>
               </li>
-              <li>
-                <Link className="links" to="/">Users</Link>
-              </li>
             </ul>
           </nav>
   
