@@ -1,6 +1,7 @@
 import React from "react";
 import "../../App.css";
 
+
 const DateComponent = (props) => {
     return (
         <div className="date-container">
@@ -8,7 +9,7 @@ const DateComponent = (props) => {
             <p>
                 Enter Date:
                <input id="date"/> 
-               <button id="submit" onClick={() => props.setDate(props.date)}>Submit</button>
+               <button id="submit" onClick={() => props.setDate()}>Submit</button>
             </p>
         </div>
     )

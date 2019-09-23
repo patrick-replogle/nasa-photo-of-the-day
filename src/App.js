@@ -21,7 +21,7 @@ function App() {
 
   // useEffect(() => {
   //   getNasaData(date, setSpaceImg)
-  // }, [date]);
+  // },[]);
 
 
   return (
