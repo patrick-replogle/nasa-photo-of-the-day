@@ -5,14 +5,11 @@ const DateComponent = (props) => {
     return (
         <div className="date-container">
             <h3>Enter date like this (YEAR-MO-DA) to change pictures:</h3>
-            <form>
-                <label>
-                    Date:
-                    <input type="text" date="date" />
-                </label>
-                <input type="submit" value="Submit" onClick={() => props.setDate()}/>
-            </form>
-            <button onClick={() => props.setDate(props.date - 1)}>click me</button>
+            <p>
+                Enter Date:
+               <input id="date"/> 
+               <button id="submit" onClick={() => props.setDate(props.date)}>Submit</button>
+            </p>
         </div>
     )
 }

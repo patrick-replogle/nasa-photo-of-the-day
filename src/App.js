@@ -6,15 +6,14 @@ import Logo from "./Components/NavComponents/Logo.js";
 import AboutComponent from "./Components/AboutComponents/AboutComponent.js"
 import DateComponent from "./Components/DateComponents/DateComponent.js";
 import Banner from "./Components/BannerComponent/Banner.js"
-import banner from "./Img/banner.jpg"
-
+import NasaImage from "./Components/NasaImageComponent/NasaImage.js"
 
 function App() {
 
-  var today = new Date();
-  var dd = String(today.getDate()).padStart(2, '0');
-  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-  var yyyy = today.getFullYear(); 
+  let today = new Date();
+  const dd = String(today.getDate()).padStart(2, '0');
+  const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  const yyyy = today.getFullYear(); 
   today = yyyy + '-' + mm + '-' + dd;
 
   const [spaceImg, setSpaceImg] = useState();
@@ -33,15 +32,9 @@ function App() {
             <Nav />
         </div>
         <Banner />
-        <div>
-          <AboutComponent />
-        </div>
-        <div>
-          <DateComponent date={date} setDate={setDate}/>
-        </div>
-        <div className="img-container">
-          <img className="nasa-img" src={spaceImg} alt="nasa render" />
-        </div>
+        <AboutComponent />
+        <DateComponent date={date} setDate={setDate}/>
+        <NasaImage spaceImg={spaceImg}/>
       </div>
     </div>
   );
