@@ -33,7 +33,7 @@ const P = styled.p`
 
 const DateComponent = props => {
   function dateHandler() {
-    return props.setDate({});
+    return props.setDate("2019-09-20");
   }
 
   return (
