@@ -9,7 +9,7 @@ import NasaImage from "./Components/NasaImageComponent/NasaImage.js";
 import axios from "axios";
 
 function App() {
-  //set date variable so it defaults to today's date
+  //set date variable so it always defaults to today's date:
   let today = new Date();
   const dd = String(today.getDate()).padStart(2, "0");
   const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
@@ -43,7 +43,7 @@ function App() {
         </div>
         <Banner />
         <AboutComponent />
-        <DateComponent date={date} setDate={setDate} />
+        <DateComponent today={today} date={date} setDate={setDate} />
         <NasaImage spaceImg={spaceImg} />
       </div>
     </div>

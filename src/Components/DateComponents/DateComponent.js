@@ -3,7 +3,12 @@ import "../../App.css";
 import styled from "styled-components";
 
 const DateContainer = styled.div`
+  background: lightgray;
   font-size: 2rem;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin-right: 5%;
+  margin-left: 5%;
 `;
 
 const Button = styled.button`
@@ -24,6 +29,7 @@ const H3 = styled.h3`
   margin: 10px 0;
   font-weight: bold;
   font-size: 2rem;
+  text-shadow: 1px 1px #6666ff;
 `;
 
 const P = styled.p`
@@ -38,11 +44,13 @@ const DateComponent = props => {
 
   return (
     <DateContainer>
-      <H3>Enter date like this (YEAR-MO-DA) to change pictures:</H3>
+      <H3>Enter date like this YEAR-MO-DA to change pictures:</H3>
       <P>
         Enter Date:
-        <input id={"date"} />
-        <Button onClick={dateHandler}>Submit</Button>
+        <input type="text" id="date" value={props.today} />
+        <Button type="submit" onClick={dateHandler}>
+          Submit
+        </Button>
       </P>
     </DateContainer>
   );
