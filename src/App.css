@@ -131,11 +131,11 @@ table {
   box-sizing: border-box;
 }
 
-/* end of reset */ 
+/* end of reset */
 
 html {
   font-size: 62.5%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -201,10 +201,8 @@ html {
   text-decoration: none;
 }
 
-
-
-
-
-
-
-
+.bootstrap {
+  padding: 10px 15px;
+  font-size: 2rem;
+  border-radius: 3px;
+}
