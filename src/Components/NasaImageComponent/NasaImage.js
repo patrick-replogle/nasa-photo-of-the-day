@@ -1,11 +1,26 @@
 import React from "react";
 import "../../App.css";
+import styled from "styled-components";
+
+const ImgContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 20px 0;
+`;
+
+const Img = styled.img`
+    width: 100%;
+    margin-left: 12%;
+    margin-top: 20px;
+`;
 
 const NasaImage = (props) => {
     return (
-        <div className="img-container">
-            <img className="nasa-img" src={props.spaceImg} alt="nasa render" />
-        </div>
+        <ImgContainer>
+            <Img src={props.spaceImg} alt="nasa render" />
+        </ImgContainer>
     )
 };
 

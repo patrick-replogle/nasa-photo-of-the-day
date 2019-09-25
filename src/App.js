@@ -7,6 +7,7 @@ import AboutComponent from "./Components/AboutComponents/AboutComponent.js"
 import DateComponent from "./Components/DateComponents/DateComponent.js";
 import Banner from "./Components/BannerComponent/Banner.js"
 import NasaImage from "./Components/NasaImageComponent/NasaImage.js"
+import axios from "axios";
 
 function App() {
 
@@ -22,6 +23,13 @@ function App() {
   // useEffect(() => {
   //   getNasaData(date, setSpaceImg)
   // },[]);
+
+  // useEffect(() => {
+  //   axios
+  //     .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`)
+  //     .then(res => setSpaceImg(res.data.hdurl))
+  //     .catch(err => console.log('error', err))
+  // }, [])
 
 
   return (
