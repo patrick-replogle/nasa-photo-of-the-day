@@ -38,20 +38,22 @@ const P = styled.p`
 `;
 
 const DateComponent = props => {
-  function dateHandler() {
-    return props.setDate("2019-09-20");
+  function dateHandler(e) {
+    let dateChange = document.getElementById("date").value;
+    e.preventDefault();
+    return props.setDate(dateChange);
   }
 
   return (
     <DateContainer>
       <H3>Enter date like this YEAR-MO-DA to change pictures:</H3>
-      <P>
+      <form>
         Enter Date:
-        <input type="text" id="date" value={props.today} />
+        <input type="text" id="date" name="date" />
         <Button type="submit" onClick={dateHandler}>
           Submit
         </Button>
-      </P>
+      </form>
     </DateContainer>
   );
 };

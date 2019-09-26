@@ -19,20 +19,20 @@ function App() {
   const [spaceImg, setSpaceImg] = useState();
   const [date, setDate] = useState(today);
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     try {
-  //       const nasaImages = await axios.get(
-  //         `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`
-  //       );
-  //       console.log(nasaImages);
-  //       setSpaceImg(nasaImages.data.hdurl);
-  //     } catch (error) {
-  //       console.log("error", error);
-  //     }
-  //   }
-  //   fetchData();
-  // }, [date]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const nasaImages = await axios.get(
+          `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`
+        );
+        console.log(nasaImages);
+        setSpaceImg(nasaImages.data.hdurl);
+      } catch (error) {
+        console.log("error", error);
+      }
+    }
+    fetchData();
+  }, [date]);
 
   return (
     <div className="container">
