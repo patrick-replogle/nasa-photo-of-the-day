@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../App.css";
 import styled from "styled-components";
 
@@ -38,21 +38,30 @@ const P = styled.p`
 `;
 
 const DateComponent = props => {
-  function dateHandler(e) {
-    let dateChange = document.getElementById("date").value;
+  const [input, setInput] = useState("");
+
+  const handleChange = e => {
+    setInput(e.target.value);
+  };
+
+  const handleSubmit = e => {
     e.preventDefault();
-    return props.setDate(dateChange);
-  }
+    props.setDate(input);
+  };
 
   return (
     <DateContainer>
       <H3>Enter date like this YEAR-MO-DA to change pictures:</H3>
-      <form>
+      <form onSubmit={handleSubmit}>
         Enter Date:
-        <input type="text" id="date" name="date" />
-        <Button type="submit" onClick={dateHandler}>
-          Submit
-        </Button>
+        <input
+          onChange={handleChange}
+          type="text"
+          id="date"
+          name="date"
+          value={input}
+        />
+        <Button type="submit">Submit</Button>
       </form>
     </DateContainer>
   );
